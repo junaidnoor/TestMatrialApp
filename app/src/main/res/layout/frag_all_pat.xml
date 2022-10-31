@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/lightgray"
+    >
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Patient"
+        android:textColor="@color/black">
+
+       <!-- <requestFocus />-->
+    </EditText>
+
+    <!--<ListView
+        android:id="@+id/all_pat_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="?listViewTheme">
+    </ListView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/all_pat_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightgray">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

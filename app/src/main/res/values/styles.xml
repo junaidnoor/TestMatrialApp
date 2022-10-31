@@ -1,0 +1,247 @@
+<resources>
+    <attr name="textViewTheme" format="reference"/>
+    <attr name="listViewTheme" format="reference"/>
+    <attr name="imageViewTheme" format="reference"/>
+    <attr name="smalTextTheme" format="reference"/>
+    <attr name="cornerTheme" format="reference"/>
+
+
+   <!-- Material Design Sliding Tabs -->
+    <color name="AppThemeColorPrimary">@color/red_500</color>
+    <color name="AppThemeColorPrimaryDark">@color/red_700</color>
+
+    <color name="IndusBlueColorPrimary">@color/indigo_500</color>
+    <color name="IndusBlueColorPrimaryDark">@color/indigo_900</color>
+
+    <color name="IndusRedColorPrimary">@color/indus_500</color>
+    <color name="IndusRedColorPrimaryDark">@color/indus_900</color>
+
+    <color name="PurpleColorPrimary">@color/purple_500</color>
+    <color name="PurpleColorPrimaryDark">@color/purple_800</color>
+
+    <color name="PinkColorPrimary">@color/pink_500</color>
+    <color name="PinkColorPrimaryDark">@color/pink_800</color>
+
+    <color name="TealColorPrimary">@color/teal_500</color>
+    <color name="TealColorPrimaryDark">@color/teal_900</color>
+
+    <color name="OrangeColorPrimary">@color/deap_orange_500</color>
+    <color name="OrangeColorPrimaryDark">@color/deap_orange_900</color>
+
+    <color name="BrownColorPrimary">@color/brown_500</color>
+    <color name="BrownColorPrimaryDark">@color/brown_900</color>
+
+
+    <color name="tabsScrollColor">#FFFFFF</color>
+    <color name="window_background">#FFFFFF</color>
+
+    <!-- Material Design Sliding Tabs -->
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lightgray">#ffebebeb</color>
+    <color name="gray1">#c1c0c0</color>
+    <color name="blue_grey">#455A64</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="green">#4CAF50</color>
+    <color name="light_green">#8BC34A</color>
+    <color name="lime">#CDDC39</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="amber">#FFC107</color>
+
+    <color name="red_500">#F44336</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_800">#C62828</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="indigo_500">#3F51B5</color>
+    <color name="indigo_900">#1A237E</color>
+    <color name="indus_500">#ffed1c24</color>
+    <color name="indus_900">#CC0000</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="purple_800">#6A1B9A</color>
+    <color name="purple_900">#4A148C</color>
+    <color name="pink_500">#E91E63</color>
+    <color name="pink_800">#AD1457</color>
+    <color name="pink_900">#880E4F</color>
+    <color name="teal_500">#009688</color>
+    <color name="teal_900">#004D40</color>
+    <color name="deap_orange_500">#FF5722</color>
+    <color name="deap_orange_900">#BF360C</color>
+    <color name="brown_500">#795548</color>
+    <color name="brown_900">#3E2723</color>
+
+    <color name="accent_color">#ffff4081</color>
+
+
+    <!-- Define List View Style -->
+    <style name="apptheme_listview">
+        <item name="android:divider">@color/AppThemeColorPrimary</item>
+        <item name="android:dividerHeight">1sp</item>
+    </style>
+    <style name="indusred_listview">
+        <item name="android:divider">@color/IndusRedColorPrimary</item>
+        <item name="android:dividerHeight">1sp</item>
+    </style>
+    <style name="indusblue_listview">
+        <item name="android:divider">@color/IndusBlueColorPrimary</item>
+        <item name="android:dividerHeight">1sp</item>
+    </style>
+
+    <!-- Define Text View Style -->
+    <style name="apptheme_textview">
+        <item name="android:textColor">@color/AppThemeColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="indusred_textview">
+        <item name="android:textColor">@color/IndusRedColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="indusblue_textview">
+        <item name="android:textColor">@color/IndusBlueColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="apptheme_smal_text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--<style name="indusred_smal_text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="indusblue_smal_text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>-->
+
+    <!-- Define Image View Style -->
+    <style name="apptheme_image_shadow">
+        <item name="android:background">@drawable/apptheme_shadow</item>
+    </style>
+    <style name="indusred_image_shadow">
+        <item name="android:background">@drawable/indus_shadow</item>
+    </style>
+    <style name="indusblue_image_shadow">
+        <item name="android:background">@drawable/indusblue_shadow</item>
+    </style>
+    <style name="purple_image_shadow">
+        <item name="android:background">@drawable/purple_shadow</item>
+    </style>
+    <style name="pink_image_shadow">
+        <item name="android:background">@drawable/pink_shadow</item>
+    </style>
+    <style name="teal_image_shadow">
+        <item name="android:background">@drawable/teal_shadow</item>
+    </style>
+    <style name="orange_image_shadow">
+        <item name="android:background">@drawable/orange_shadow</item>
+    </style>
+    <style name="brown_image_shadow">
+        <item name="android:background">@drawable/brown_shadow</item>
+    </style>
+
+
+    <!-- Define Text Round Corner Style -->
+    <style name="indus_corner">
+        <item name="android:background">@drawable/rounded_corner</item>
+    </style>
+
+    <style name="apptheme_round_corner">
+        <item name="android:background">@drawable/apptheme_corner</item>
+    </style>
+    <style name="indusred_round_corner">
+        <item name="android:background">@drawable/rounded_corner</item>
+    </style>
+    <style name="indusblue_round_corner">
+        <item name="android:background">@drawable/indusblue_corner</item>
+    </style>
+    <style name="purple_round_corner">
+        <item name="android:background">@drawable/purple_corner</item>
+    </style>
+    <style name="pink_round_corner">
+        <item name="android:background">@drawable/pink_corner</item>
+    </style>
+    <style name="teal_round_corner">
+        <item name="android:background">@drawable/teal_corner</item>
+    </style>
+    <style name="orange_round_corner">
+        <item name="android:background">@drawable/orange_corner</item>
+    </style>
+    <style name="brown_round_corner">
+        <item name="android:background">@drawable/brown_corner</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/AppThemeColorPrimary</item>
+        <item name="colorPrimaryDark">@color/AppThemeColorPrimaryDark</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="listViewTheme">@style/apptheme_listview</item>
+        <item name="textViewTheme">@style/apptheme_textview</item>
+        <item name="imageViewTheme">@style/apptheme_image_shadow</item>
+        <item name="smalTextTheme">@style/apptheme_smal_text</item>
+        <item name="cornerTheme">@style/apptheme_round_corner</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+
+    </style>
+    <style name="IndusBlueTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/IndusBlueColorPrimary</item>
+        <item name="colorPrimaryDark">@color/IndusBlueColorPrimaryDark</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="listViewTheme">@style/indusblue_listview</item>
+        <item name="textViewTheme">@style/indusblue_textview</item>
+        <item name="imageViewTheme">@style/indusblue_image_shadow</item>
+        <item name="smalTextTheme">@style/apptheme_smal_text</item>
+        <item name="cornerTheme">@style/indusblue_round_corner</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <!--<item name="colorAccent">@color/accent_500</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="windowNoTitle">true</item>
+-->
+    </style>
+    <style name="IndusRedTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/IndusRedColorPrimary</item>
+        <item name="colorPrimaryDark">@color/IndusRedColorPrimaryDark</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="listViewTheme">@style/indusred_listview</item>
+        <item name="textViewTheme">@style/indusred_textview</item>
+        <item name="imageViewTheme">@style/indusred_image_shadow</item>
+        <item name="smalTextTheme">@style/apptheme_smal_text</item>
+        <item name="cornerTheme">@style/indusred_round_corner</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+
+
+    </style>
+
+
+    <style name="AppTheme1" parent="AppTheme.Base"/>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/IndusRedColorPrimary</item>
+        <item name="colorPrimaryDark">@color/IndusRedColorPrimaryDark</item>
+        <item name="colorAccent">@color/accent_color</item>
+
+        <!--<item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>-->
+
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+    <style name="AppTheme1.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme1.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="IndusRedTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="IndusRedTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

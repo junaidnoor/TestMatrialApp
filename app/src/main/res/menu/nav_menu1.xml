@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <group android:checkableBehavior="single"
+            android:id="@+id/g_home">
+            <item
+                android:id="@+id/home"
+                android:checked="true"
+                android:icon="@drawable/ic_search_black"
+                android:title="Home"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </group>
+
+        <item android:title="Out Patient">
+            <menu>
+                <group android:checkableBehavior="single"
+                    android:id="@+id/g_opat">
+                    <item
+                        android:id="@+id/appointment"
+                        android:checked="false"
+                        android:icon="@drawable/ic_appiontment"
+                        android:title="Today"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                    <item
+                        android:id="@+id/followup"
+                        android:checked="false"
+                        android:icon="@drawable/ic_follow_black"
+                        android:title="Follow-Up"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="In Patient">
+            <menu>
+                <group android:checkableBehavior="single"
+                    android:id="@+id/g_inpat">
+
+                    <item
+                        android:id="@+id/admited"
+                        android:checked="false"
+                        android:icon="@drawable/ic_in_pat_black"
+                        android:title="Admited"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <item
+                        android:id="@+id/icu"
+                        android:checked="false"
+                        android:icon="@drawable/ic_icu_black"
+                        android:title="I.C.U"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <item
+                        android:id="@+id/ccu"
+                        android:checked="false"
+                        android:icon="@drawable/ic_ccu_black"
+                        android:title="C.C.U"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </group>
+            </menu>
+        </item>
+
+        <item   android:title="Setting">
+            <menu>
+                <group android:checkableBehavior="single"
+                    android:id="@+id/g_setting">
+                    <item
+                        android:id="@+id/theme"
+                        android:checked="false"
+                        android:icon="@drawable/ic_drawer"
+                        android:title="Thenmes"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                    <item
+                        android:id="@+id/logout"
+                        android:checked="false"
+                        android:icon="@drawable/ic_logout_black"
+                        android:title="Exit"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

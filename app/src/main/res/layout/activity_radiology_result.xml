@@ -1,0 +1,75 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_content"
+    tools:context=".RadiologyResultActivity">
+
+    <include
+        layout="@layout/app_bar_layout1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="?attr/colorPrimary">
+
+       <!-- <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:paddingBottom="10dp"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:id="@+id/lbl_parameter"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="Parameter"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                style="?smalTextTheme" />
+
+            <TextView
+                android:id="@+id/lbl_result"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="left"
+                android:text="Result (unit)"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                style="?smalTextTheme"/>
+
+            <TextView
+                android:id="@+id/lbl_normal_result"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="center"
+                android:text="Normal Values"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                style="?smalTextTheme"/>
+
+        </LinearLayout>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/visit_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgray">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
