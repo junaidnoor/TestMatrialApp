@@ -3,41 +3,30 @@ package pk.com.jtech.junaid.testmatrialapp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Environment;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URL;
-import java.net.URLConnection;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 
 
-public class GroupDetailActivity extends ActionBarActivity {
+public class GroupDetailActivity extends AppCompatActivity {
 
     public static int _male;
     public static int _female;
@@ -321,14 +310,18 @@ public class GroupDetailActivity extends ActionBarActivity {
 
         @Override
         protected void onPreExecute() {
-            mProgressDialog.setTitle("Please Wait...");
-            mProgressDialog.setMessage("Data is loading");
-            mProgressDialog.show();
+            //mProgressDialog.setTitle("Please Wait...");
+            //mProgressDialog.setMessage("Data is loading");
+            //mProgressDialog.show();
             super.onPreExecute();
         }
         @Override
         protected Void doInBackground(Void... params) {
-            array_list = mMrDatasource.getGroupDetail(uid, pas,ipa,para);
+            try {
+                array_list = mMrDatasource.getGroupDetail(uid, pas,ipa,para);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return null;
         }
         @Override

@@ -15,11 +15,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="?attr/colorPrimary">
+        android:background="?attr/colorPrimary"
+        android:baselineAligned="false">
 
         <LinearLayout
 
-            android:layout_width="fill_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".7"
             android:orientation="vertical">
@@ -28,34 +29,37 @@
                 android:id="@+id/pat_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
                 android:layout_marginBottom="2dp"
-                android:layout_marginLeft="3dp"
                 android:singleLine="true"
-                android:text="Patient"
+                android:text="@string/patient"
                 android:textColor="@color/white"
-                android:textSize="17dp"/>
+                android:textSize="17sp"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/pat_sdw"
+                style="?smalTextTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
                 android:layout_marginBottom="2dp"
-                android:layout_marginLeft="3dp"
                 android:singleLine="true"
-                android:text="SDW"
+                android:text="@string/sdw"
                 android:textColor="@color/white"
-                style="?smalTextTheme"/>
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/pat_age"
+                style="?smalTextTheme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
                 android:layout_marginBottom="2dp"
-                android:layout_marginLeft="3dp"
                 android:singleLine="true"
-                android:text="Age"
+                android:text="@string/age"
                 android:textColor="@color/white"
-                style="?smalTextTheme"/>
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
     </LinearLayout>
@@ -74,10 +78,10 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:gravity="center"
-            android:text="Activity Title"
+            android:text="@string/activity_title"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
     </LinearLayout>
     <ListView

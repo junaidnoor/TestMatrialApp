@@ -1,5 +1,6 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -17,8 +18,7 @@ public class MrDatasource {
 
 
     // -------------------- Get M.R Code  -------------------------------
-    public ArrayList<Employee> getEmp(String u,String p,String ip,String st)
-    {
+    public ArrayList<Employee> getEmp(String u,String p,String ip,String st) throws IOException {
         ArrayList<Employee> emp = new ArrayList<Employee>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -27,8 +27,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get M.R Code  -------------------------------
-    public ArrayList<MrInfo> getList(String u,String p,String ip,String st)
-    {
+    public ArrayList<MrInfo> getList(String u,String p,String ip,String st) throws IOException {
         ArrayList<MrInfo> mrinfo = new ArrayList<MrInfo>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -37,8 +36,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Visit History  -------------------------------
-    public ArrayList<VisitDate> getVisit(String u,String p,String ip,String st)
-    {
+    public ArrayList<VisitDate> getVisit(String u,String p,String ip,String st) throws IOException {
         ArrayList<VisitDate> visitdate = new ArrayList<VisitDate>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -47,8 +45,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get In Patient Med Rec  -------------------------------
-    public ArrayList<InPatMedRec> getInPatMedRec(String u,String p,String ip,String st)
-    {
+    public ArrayList<InPatMedRec> getInPatMedRec(String u,String p,String ip,String st) throws IOException {
         ArrayList<InPatMedRec> inpatmed = new ArrayList<InPatMedRec>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -57,8 +54,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get In Patient Med Rec Det  -------------------------------
-    public ArrayList<InPatMedRecDet> getInPatMedRecDet(String u,String p,String ip,String st)
-    {
+    public ArrayList<InPatMedRecDet> getInPatMedRecDet(String u,String p,String ip,String st) throws IOException {
         ArrayList<InPatMedRecDet> inpatmed = new ArrayList<InPatMedRecDet>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -68,8 +64,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get OP History  -------------------------------
-    public ArrayList<ProcedureList> getOpHistory(String u,String p,String ip,String st)
-    {
+    public ArrayList<ProcedureList> getOpHistory(String u,String p,String ip,String st) throws IOException {
         ArrayList<ProcedureList> proc_list = new ArrayList<ProcedureList>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -78,8 +73,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get OP History  Detail -------------------------------
-    public ArrayList<ProcedureListDetail> getOpHistoryDet(String u,String p,String ip,String st)
-    {
+    public ArrayList<ProcedureListDetail> getOpHistoryDet(String u,String p,String ip,String st) throws IOException {
         ArrayList<ProcedureListDetail> proc_list = new ArrayList<ProcedureListDetail>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -91,8 +85,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Medical Record  -------------------------------
-    public ArrayList<MedicalRecord> getMedical(String u,String p,String ip,String st)
-    {
+    public ArrayList<MedicalRecord> getMedical(String u,String p,String ip,String st) throws IOException {
         ArrayList<MedicalRecord> visitdate = new ArrayList<MedicalRecord>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -102,8 +95,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Group List -------------------------------
-    public ArrayList<GroupList> getGroupList(String u,String p,String ip,String st)
-    {
+    public ArrayList<GroupList> getGroupList(String u,String p,String ip,String st) throws IOException {
         ArrayList<GroupList> groupList = new ArrayList<GroupList>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=this.mrCode;
@@ -114,8 +106,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Test List -------------------------------
-    public ArrayList<TestList> getTestList(String u,String p,String ip,String st)
-    {
+    public ArrayList<TestList> getTestList(String u,String p,String ip,String st) throws IOException {
         ArrayList<TestList> testLists = new ArrayList<TestList>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -126,8 +117,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get IRS List -------------------------------
-    public ArrayList<IRS> getIRSList(String u,String p,String ip,String st)
-    {
+    public ArrayList<IRS> getIRSList(String u,String p,String ip,String st) throws IOException {
         ArrayList<IRS> irsLists = new ArrayList<IRS>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -138,8 +128,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Group Detail -------------------------------
-    public ArrayList<GroupDetail> getGroupDetail(String u,String p,String ip,String st)
-    {
+    public ArrayList<GroupDetail> getGroupDetail(String u,String p,String ip,String st) throws IOException {
         ArrayList<GroupDetail> groupDetail = new ArrayList<GroupDetail>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -153,8 +142,7 @@ public class MrDatasource {
 
 
     // -------------------- Get Normal Result -------------------------------
-    public ArrayList<NormalResult> getNormalResult(String u,String p,String ip,String st)
-    {
+    public ArrayList<NormalResult> getNormalResult(String u,String p,String ip,String st) throws IOException {
         ArrayList<NormalResult> groupDetail = new ArrayList<NormalResult>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -167,8 +155,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Micro Result Stain -------------------------------
-    public ArrayList<MicroResultSatin> getMicroResultStain(String u,String p,String ip,String st)
-    {
+    public ArrayList<MicroResultSatin> getMicroResultStain(String u,String p,String ip,String st) throws IOException {
         ArrayList<MicroResultSatin> groupDetail = new ArrayList<MicroResultSatin>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -181,8 +168,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Micro Result Stain -------------------------------
-    public ArrayList<MicroResultOrg> getMicroResultOrg(String u,String p,String ip,String st)
-    {
+    public ArrayList<MicroResultOrg> getMicroResultOrg(String u,String p,String ip,String st) throws IOException {
         ArrayList<MicroResultOrg> groupDetail = new ArrayList<MicroResultOrg>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;
@@ -195,8 +181,7 @@ public class MrDatasource {
     }
 
     // -------------------- Get Radiology Result -------------------------------
-    public ArrayList<RadiologyResult> getRadiologyResult(String u,String p,String ip,String st)
-    {
+    public ArrayList<RadiologyResult> getRadiologyResult(String u,String p,String ip,String st) throws IOException {
         ArrayList<RadiologyResult> groupDetail = new ArrayList<RadiologyResult>();
         JsonParser mJsonParser = new JsonParser(u,p,ip,st);
         JsonParser.mrCode=mrCode;

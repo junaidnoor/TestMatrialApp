@@ -3,11 +3,13 @@ package pk.com.jtech.junaid.testmatrialapp;
 /**
  * Created by Junaid on 9/20/2015.
  */
-import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+//import android.content.Intent;
+//import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 
 public class MrListRowHolder extends RecyclerView.ViewHolder {

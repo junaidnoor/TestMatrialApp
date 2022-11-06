@@ -3,6 +3,7 @@ package pk.com.jtech.junaid.testmatrialapp;
 /**
  * Created by Junaid on 8/22/2015.
  */
+import android.annotation.SuppressLint;
 import android.app.IntentService;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -12,7 +13,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.v4.app.NotificationCompat;
+
+import androidx.core.app.NotificationCompat;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -45,6 +47,7 @@ public class GCMService extends IntentService {
         super("GCMService");
     }
 
+    @SuppressLint("WrongThread")
     @Override
     protected void onHandleIntent(Intent intent) {
 

@@ -9,7 +9,7 @@ import java.io.StringWriter;
 /**
  * Created by Junaid Noor Siddiqui on 5/12/2016.
  */
-public class ExceptionHanlder implements Thread.UncaughtExceptionHandler{
+public class ExceptionHanlder implements java.lang.Thread.UncaughtExceptionHandler{
 
     private final Context context;
     private String LINE_SEPARATOR = "\n";

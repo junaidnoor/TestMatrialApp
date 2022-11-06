@@ -12,6 +12,7 @@ public class Employee {
     private String emp_designation;
     private String isvalid;
     private int empImgReosurce;
+    private String msstat;
 
     public String getEmp_code() {
         return emp_code;
@@ -67,5 +68,13 @@ public class Employee {
 
     public void setEmpImgReosurce(int empImgReosurce) {
         this.empImgReosurce = empImgReosurce;
+    }
+
+    public String getMsstat() {
+        return msstat;
+    }
+
+    public void setMsstat(String msstat) {
+        this.msstat = msstat;
     }
 }

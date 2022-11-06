@@ -1,11 +1,12 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
@@ -42,11 +43,6 @@ public class MedRecAdapter1 extends RecyclerView.Adapter<MrListRowHolder> {
         MedicalRecord medi = mrList.get(i);
         //MedicalRecord medi = getItem(position);
 
-        /*Picasso.with(mContext).load(feedItem.getThumbnail())
-                .error(R.drawable.placeholder)
-                .placeholder(R.drawable.placeholder)
-                .into(mrListRowHolder.thumbnail);
-        */
         mrListRowHolder.mrinfo_title.setText(Html.fromHtml(medi.getTitle()));
         mrListRowHolder.mrinfo_mrdata.setText(Html.fromHtml(medi.getMrdata()));
 

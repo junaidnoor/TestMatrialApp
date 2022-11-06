@@ -20,7 +20,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 
 /**
@@ -42,6 +53,14 @@ public class JsonParser {
     private String eCode;
     private String jsonIpa;
     private String stat;
+
+    private String _mrCode;
+    private String _vDate;
+    private String _gCode;
+    private String _tCode;
+    private String _admCode;
+    private String _opDate;
+    private String _procCode;
 
     int bitmap001 = R.drawable.ic_001;
     int bitmap002 = R.drawable.ic_002;
@@ -67,10 +86,9 @@ public class JsonParser {
     }
 
     // --------------------------- IRS List ----------------------------------
-    public ArrayList<Employee> parseGetEmp(){
+    public ArrayList<Employee> parseGetEmp() throws IOException {
         //this.mrCode = mr_code;
         ArrayList<Employee> array_list = new ArrayList<Employee>();
-
 
         //String strJson = httpPost("http://192.168.0.103:85/unApprovPO.aspx");
         String strJson = httpPost("http://" + jsonIpa + "/getEmployee.aspx");
@@ -98,7 +116,7 @@ public class JsonParser {
     }
 
     // --------------------------- Patient List ----------------------------------
-    public ArrayList<MrInfo> parseMrinfo(){
+    public ArrayList<MrInfo> parseMrinfo() throws IOException {
 
         ArrayList<MrInfo> array_list = new ArrayList<MrInfo>();
 
@@ -191,7 +209,7 @@ public class JsonParser {
     }
 
     // --------------------------- Visit History ----------------------------------
-    public ArrayList<VisitDate> parseVisit(){
+    public ArrayList<VisitDate> parseVisit() throws IOException {
 
         ArrayList<VisitDate> array_list = new ArrayList<VisitDate>();
 
@@ -233,7 +251,7 @@ public class JsonParser {
     }
 
     // --------------------------- Medical Record ----------------------------------
-    public ArrayList<MedicalRecord> parseMedical(){
+    public ArrayList<MedicalRecord> parseMedical() throws IOException {
 
         ArrayList<MedicalRecord> array_list = new ArrayList<MedicalRecord>();
 
@@ -265,7 +283,7 @@ public class JsonParser {
     }
 
     // --------------------------- Visit History ----------------------------------
-    public ArrayList<InPatMedRec> parseInPat(){
+    public ArrayList<InPatMedRec> parseInPat() throws IOException {
 
         ArrayList<InPatMedRec> array_list = new ArrayList<InPatMedRec>();
 
@@ -308,7 +326,7 @@ public class JsonParser {
     }
 
     // --------------------------- Medical Record ----------------------------------
-    public ArrayList<InPatMedRecDet> parseInPatDet(){
+    public ArrayList<InPatMedRecDet> parseInPatDet() throws IOException {
 
         ArrayList<InPatMedRecDet> array_list = new ArrayList<InPatMedRecDet>();
 
@@ -344,7 +362,7 @@ public class JsonParser {
 
 
     // --------------------------- Procedure List ----------------------------------
-    public ArrayList<ProcedureList> parseProcList(){
+    public ArrayList<ProcedureList> parseProcList() throws IOException {
 
         ArrayList<ProcedureList> array_list = new ArrayList<ProcedureList>();
 
@@ -383,7 +401,7 @@ public class JsonParser {
     }
 
     // --------------------------- Procedure List Detail----------------------------------
-    public ArrayList<ProcedureListDetail> parseProcListDet(){
+    public ArrayList<ProcedureListDetail> parseProcListDet() throws IOException {
 
         ArrayList<ProcedureListDetail> array_list = new ArrayList<ProcedureListDetail>();
 
@@ -444,7 +462,7 @@ public class JsonParser {
     }
 
     // --------------------------- Group List ----------------------------------
-    public ArrayList<GroupList> parseGroupList(){
+    public ArrayList<GroupList> parseGroupList() throws IOException {
         //this.mrCode = mr_code;
         ArrayList<GroupList> array_list = new ArrayList<GroupList>();
 
@@ -533,7 +551,7 @@ public class JsonParser {
     }
 
     // --------------------------- Test List ----------------------------------
-    public ArrayList<TestList> parseTestList(){
+    public ArrayList<TestList> parseTestList() throws IOException {
         //this.mrCode = mr_code;
         ArrayList<TestList> array_list = new ArrayList<TestList>();
 
@@ -626,7 +644,7 @@ public class JsonParser {
     }
 
     // --------------------------- IRS List ----------------------------------
-    public ArrayList<IRS> parseIRSList(){
+    public ArrayList<IRS> parseIRSList() throws IOException {
         //this.mrCode = mr_code;
         ArrayList<IRS> array_list = new ArrayList<IRS>();
 
@@ -663,7 +681,7 @@ public class JsonParser {
     }
 
         // --------------------------- Group Detail ----------------------------------
-    public ArrayList<GroupDetail> parseGroupDetail(){
+    public ArrayList<GroupDetail> parseGroupDetail() throws IOException {
         //this.mrCode = mr_code;
         ArrayList<GroupDetail> array_list = new ArrayList<GroupDetail>();
 
@@ -717,7 +735,7 @@ public class JsonParser {
 
 
     // --------------------------- Normal Result ----------------------------------
-    public ArrayList<NormalResult> parseNormalResult(){
+    public ArrayList<NormalResult> parseNormalResult() throws IOException {
         //this.mrCode = mr_code;
         ArrayList<NormalResult> array_list = new ArrayList<NormalResult>();
 
@@ -760,7 +778,7 @@ public class JsonParser {
 
 
     // --------------------------- Microbiology Result Stain----------------------------------
-    public ArrayList<MicroResultSatin> parseMicroResultStain(){
+    public ArrayList<MicroResultSatin> parseMicroResultStain() throws IOException {
         ArrayList<MicroResultSatin> array_list = new ArrayList<MicroResultSatin>();
 
 
@@ -788,7 +806,7 @@ public class JsonParser {
 
 
     // --------------------------- Microbiology Result Ogganism----------------------------------
-    public ArrayList<MicroResultOrg> parseMicroResultOrg(){
+    public ArrayList<MicroResultOrg> parseMicroResultOrg() throws IOException {
         ArrayList<MicroResultOrg> array_list = new ArrayList<MicroResultOrg>();
 
         String strJson = httpPost("http://" + jsonIpa + "/microResult.aspx");
@@ -820,7 +838,7 @@ public class JsonParser {
 
 
     // --------------------------- Normal Result ----------------------------------
-    public ArrayList<RadiologyResult> parseRadiologyResult(){
+    public ArrayList<RadiologyResult> parseRadiologyResult() throws IOException {
         //this.mrCode = mr_code;
         ArrayList<RadiologyResult> array_list = new ArrayList<RadiologyResult>();
 
@@ -871,6 +889,7 @@ public class JsonParser {
         return result;
     }
 
+    /*
     private String httpPost(String url) {
         //String url = "http://demo.xorsat.org/xorfood/api/add_order.php";
         String result = "";
@@ -899,6 +918,128 @@ public class JsonParser {
             e.printStackTrace();
         }
         return result;
+    }
+     */
+
+    private String httpPost(String url) throws IOException {
+        //"http://demo.xorsat.org/xorfood/api/add_order.php"
+        StringBuilder sb = new StringBuilder();
+        String result = "";
+        URL murl = new URL(url);
+        HttpURLConnection httpsURLConnection = (HttpURLConnection)murl.openConnection();
+        //httpsURLConnection.setReadTimeout(15000);
+        //httpsURLConnection.setConnectTimeout(20000);
+        //httpsURLConnection.setRequestMethod("POST");
+        //httpsURLConnection.setRequestProperty("Content-Type", "application/json");
+        httpsURLConnection.setDoInput(true);
+        httpsURLConnection.setDoOutput(true);
+
+        OutputStream outputStream = httpsURLConnection.getOutputStream();
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+        bufferedWriter.write(getQuery(putPreamer()));
+        bufferedWriter.flush();
+        bufferedWriter.close();
+        outputStream.close();
+        httpsURLConnection.connect();
+        //int mStatus = httpsURLConnection.getResponseCode();
+        try
+        {
+            InputStream in = new BufferedInputStream(httpsURLConnection.getInputStream());
+            BufferedReader bin = new BufferedReader(new InputStreamReader(in));
+            String inputLine;
+            while ((inputLine = bin.readLine()) != null){
+                sb.append(inputLine);
+            }
+        }
+        finally
+        {
+            httpsURLConnection.disconnect();
+        }
+        result = sb.toString();
+        //Widget
+        //mHttpPost.setEntity(new UrlEncodedFormEntity(mListNameValuePair));
+        //HttpResponse mHttpResponse = mHttpClient.execute(mHttpPost);
+        //result = EntityUtils.toString(mHttpResponse.getEntity());
+
+        return result;
+    }
+    private String getQuery(ArrayList<NameValuePair> params) throws UnsupportedEncodingException
+    {
+        StringBuilder result = new StringBuilder();
+        boolean first = true;
+
+        for (NameValuePair pair : params)
+        {
+            if (first)
+                first = false;
+            else
+                result.append("&");
+            result.append(URLEncoder.encode(pair.getName(), "UTF-8"));
+            result.append("=");
+            result.append(URLEncoder.encode(pair.getValue(), "UTF-8"));
+
+        }
+        return result.toString();
+    }
+    private ArrayList<NameValuePair> putPreamer(){
+
+        _mrCode = this.mrCode;
+        _vDate = this.admCode;
+        _gCode = this.gCode;
+        _tCode = this.tCode;
+        _admCode = this.admCode;
+        _opDate = this.opDate;
+        _procCode = this.procCode;
+
+        if (this.jsonUname==null){
+            this.jsonUname="a";
+        }
+        if (this.jsonPass==null){
+            this.jsonPass="a";
+        }
+        if (this.stat==null){
+            this.stat="a";
+        }
+        if (this.eCode==null){
+            this.eCode="a";
+        }
+        if (_mrCode==null){
+            _mrCode="a";
+        }
+        if (_vDate==null){
+            _vDate="a";
+        }
+        if (_gCode==null){
+            _gCode="a";
+        }
+        if (_tCode==null){
+            _tCode="a";
+        }
+        if (_admCode==null){
+            _admCode="a";
+        }
+        if (_opDate==null){
+            _opDate="a";
+        }
+        if (_procCode==null){
+            _procCode="a";
+        }
+
+        ArrayList<NameValuePair> mListNameValuePair = new ArrayList<NameValuePair>();
+        mListNameValuePair.add(new BasicNameValuePair("Uid", this.jsonUname));
+        mListNameValuePair.add(new BasicNameValuePair("pass", this.jsonPass));
+        mListNameValuePair.add(new BasicNameValuePair("Widget", this.stat));
+        mListNameValuePair.add(new BasicNameValuePair("appid", "0001"));
+        mListNameValuePair.add(new BasicNameValuePair("ecode", this.eCode));
+        mListNameValuePair.add(new BasicNameValuePair("MrCode", _mrCode));
+        mListNameValuePair.add(new BasicNameValuePair("VisitDate", _vDate));
+        mListNameValuePair.add(new BasicNameValuePair("GroupCode", _gCode));
+        mListNameValuePair.add(new BasicNameValuePair("TestCode", _tCode));
+        mListNameValuePair.add(new BasicNameValuePair("AdmCode", _admCode));
+        mListNameValuePair.add(new BasicNameValuePair("OpDate", _opDate));
+        mListNameValuePair.add(new BasicNameValuePair("ProcCode", _procCode));
+
+        return mListNameValuePair;
     }
 
 }

@@ -65,9 +65,4 @@
 
     </LinearLayout>
 
-    <!--style="?imageViewTheme"
-    android:background="?attr/colorPrimary"
-
-    android:background="@drawable/rounded_corner"
-    -->
 </LinearLayout>

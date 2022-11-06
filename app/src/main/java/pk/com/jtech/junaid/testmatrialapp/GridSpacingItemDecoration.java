@@ -1,8 +1,9 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Junaid on 10/26/2015.

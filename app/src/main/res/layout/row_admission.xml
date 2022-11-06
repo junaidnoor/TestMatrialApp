@@ -7,7 +7,7 @@
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/ly_root"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -320,72 +320,6 @@
                             android:text="Pre. Admission"
                             style="?smalTextTheme" />
                     </LinearLayout>
-                    <!--abcd-->
-
-
-                   <!-- <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@android:color/darker_gray" />
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:id="@+id/lbl_admiting_bed"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginTop="7dp"
-                            android:layout_marginBottom="2dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="5dp"
-                            android:singleLine="false"
-                            android:text="Admiting Bed"
-                            style="?textViewTheme" />
-
-                        <TextView
-                            android:id="@+id/lbl_adminting_ward"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:layout_marginTop="7dp"
-                            android:layout_marginBottom="2dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:singleLine="false"
-                            android:text="Admiting Ward"
-                            style="?textViewTheme" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="5dp">
-                        <TextView
-                            android:id="@+id/row_admiting_bed"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="5dp"
-                            android:singleLine="false"
-                            android:text="Admiting Bed"
-                            style="?smalTextTheme" />
-
-                        <TextView
-                            android:id="@+id/row_adminting_ward"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:singleLine="false"
-                            android:text="Admiting Ward"
-                            style="?smalTextTheme" />
-                    </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -447,8 +381,6 @@
                             style="?smalTextTheme" />
                     </LinearLayout>
 
-
-                    <!--abcd-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -521,5 +453,5 @@
 
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

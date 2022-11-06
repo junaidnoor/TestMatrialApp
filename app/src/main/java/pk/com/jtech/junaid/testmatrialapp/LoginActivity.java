@@ -8,28 +8,23 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-//import org.apache.http.HttpResponse;
-//import org.apache.http.NameValuePair;
-//import org.apache.http.client.HttpClient;
-//import org.apache.http.client.entity.UrlEncodedFormEntity;
-//import org.apache.http.client.methods.HttpPost;
-//import org.apache.http.impl.client.DefaultHttpClient;
-//import org.apache.http.message.BasicNameValuePair;
-//import org.apache.http.util.EntityUtils;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
 
     EditText mEdituname;
     EditText mEditpass;
     public static String ipa;
     public String checkIn;
     public String myMsg;
+    private Button btn;
 
     ArrayList<Employee> array_list;
     MrDatasource mMrDatasource;
@@ -55,6 +50,20 @@ public class LoginActivity extends Activity {
         mEditpass = (EditText)findViewById(R.id.password);
         delete();
 
+        btn = (Button)findViewById(R.id.logbtn);
+        btn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (isValidate()) {
+                    //delete();
+                    uId=mEdituname.getText().toString().toUpperCase();
+                    pas=mEditpass.getText().toString().toLowerCase();
+                    new asyncTask_isValidate().execute();
+                }
+            }
+        });
+
         //mEditTextName = (EditText)findViewById(R.id.order_editText_name);
         //mEditTextPhone = (EditText)findViewById(R.id.order_editText_phone);
     }
@@ -63,16 +72,6 @@ public class LoginActivity extends Activity {
     protected void onPause() {
         //new asyncTask_notification().execute();
         super.onPause();
-    }
-
-    public void onClick_login(View view)
-    {
-        if (isValidate()) {
-            //delete();
-            uId=mEdituname.getText().toString().toUpperCase();
-            pas=mEditpass.getText().toString().toLowerCase();
-            new asyncTask_isValidate().execute();
-        }
     }
 
     private boolean isValidate()
@@ -93,7 +92,6 @@ public class LoginActivity extends Activity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-
     private class asyncTask_isValidate extends AsyncTask<Void, Void, Void>
     {
         ProgressDialog mProgressDialog = new ProgressDialog(LoginActivity.this);
@@ -110,7 +108,11 @@ public class LoginActivity extends Activity {
         @Override
         protected Void doInBackground(Void... params) {
             //isval = httpPost("http://" + ipa + "/isValidate.aspx");
-            array_list = mMrDatasource.getEmp(uId, pas, ipa, "A");
+            try {
+                array_list = mMrDatasource.getEmp(uId, pas, ipa, "A");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             //"+ipa+"
             return null;
         }
@@ -176,24 +178,4 @@ public class LoginActivity extends Activity {
         mSQLiteDatabase.execSQL(InvestigationQry.SQL_DELETE_ALL_USER);
 
     }
-
-    /*private String httpPost(String url) {
-        //String url = "http://demo.xorsat.org/xorfood/api/add_order.php";
-        String result = "";
-        HttpClient mHttpClient = new DefaultHttpClient();
-        HttpPost mHttpPost = new HttpPost(url);
-        try {
-            ArrayList<NameValuePair> mListNameValuePair = new ArrayList<NameValuePair>();
-            mListNameValuePair.add(new BasicNameValuePair("Uid", mEdituname.getText().toString().toUpperCase()));
-            mListNameValuePair.add(new BasicNameValuePair("pass", mEditpass.getText().toString().toLowerCase()));
-            mListNameValuePair.add(new BasicNameValuePair("appid", "0001"));
-            mHttpPost.setEntity(new UrlEncodedFormEntity(mListNameValuePair));
-            HttpResponse mHttpResponse = mHttpClient.execute(mHttpPost);
-            result = EntityUtils.toString(mHttpResponse.getEntity());
-        } catch (IOException e) {
-            e.printStackTrace();
-
-        }
-        return result;
-    }*/
 }
