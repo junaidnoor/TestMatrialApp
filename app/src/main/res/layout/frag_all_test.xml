@@ -3,23 +3,11 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-
-    <!--<GridView
-        android:id="@+id/testlist_listview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:columnWidth="90dp"
-        android:gravity="center"
-        android:numColumns="auto_fit"
-        android:stretchMode="columnWidth"
-        android:scrollbars="horizontal">
-    </GridView>-->
-
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/testlist_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

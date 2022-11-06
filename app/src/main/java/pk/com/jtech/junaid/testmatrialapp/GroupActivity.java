@@ -1,20 +1,19 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;
 
 
-public class GroupActivity extends ActionBarActivity {
+public class GroupActivity extends AppCompatActivity {
 
     // Declaring Your View and Variables
     public static String uid;
@@ -42,11 +41,7 @@ public class GroupActivity extends ActionBarActivity {
         setContentView(R.layout.activity_group);
         setupToolbar();
         init();
-
-
     }
-
-
 
     private void init() {
         mMrDatasource = new MrDatasource();

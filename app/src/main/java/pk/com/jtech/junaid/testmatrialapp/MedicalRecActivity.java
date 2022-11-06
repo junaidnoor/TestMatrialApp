@@ -4,25 +4,25 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class MedicalRecActivity extends ActionBarActivity {
+public class MedicalRecActivity extends AppCompatActivity {
 
     public static int _male;
     public static int _female;
@@ -169,14 +169,18 @@ public class MedicalRecActivity extends ActionBarActivity {
 
         @Override
         protected void onPreExecute() {
-            mProgressDialog.setTitle("Please Wait...");
-            mProgressDialog.setMessage("Data is loading");
-            mProgressDialog.show();
+            //mProgressDialog.setTitle("Please Wait...");
+            //mProgressDialog.setMessage("Data is loading");
+            //mProgressDialog.show();
             super.onPreExecute();
         }
         @Override
         protected Void doInBackground(Void... params) {
-            array_list = mMrDatasource.getMedical(uid, pas, ipa, "A");
+            try {
+                array_list = mMrDatasource.getMedical(uid, pas, ipa, "A");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return null;
         }
         @Override

@@ -5,9 +5,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.ContextMenu;
@@ -19,6 +16,12 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -382,14 +385,18 @@ public class FragToDay extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            mProgressDialog.setTitle("Please Wait...");
-            mProgressDialog.setMessage("Data is loading");
-            mProgressDialog.show();
+            //mProgressDialog.setTitle("Please Wait...");
+            //mProgressDialog.setMessage("Data is loading");
+            //mProgressDialog.show();
             super.onPreExecute();
         }
         @Override
         protected Void doInBackground(Void... params) {
-            array_list = mMrDatasource.getList(uid,pas,ipa,"T");
+            try {
+                array_list = mMrDatasource.getList(uid,pas,ipa,"T");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return null;
         }
         @Override

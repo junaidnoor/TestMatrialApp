@@ -5,19 +5,19 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class InPatMedActivity extends AppCompatActivity {
@@ -170,14 +170,18 @@ public class InPatMedActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            mProgressDialog.setTitle("Please Wait...");
-            mProgressDialog.setMessage("Data is loading");
-            mProgressDialog.show();
+            //mProgressDialog.setTitle("Please Wait...");
+            //mProgressDialog.setMessage("Data is loading");
+            //mProgressDialog.show();
             super.onPreExecute();
         }
         @Override
         protected Void doInBackground(Void... params) {
-            array_list = mMrDatasource.getInPatMedRec(uid, pas, ipa, "M");
+            try {
+                array_list = mMrDatasource.getInPatMedRec(uid, pas, ipa, "M");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return null;
         }
         @Override

@@ -7,7 +7,7 @@
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/ly_root"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -96,18 +96,7 @@
                 style="?smalTextTheme"
                 android:text="M.R Data"/>
 
-            <!--<TextView
-                android:id="@+id/row_mrinfo_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:layout_marginLeft="3dp"
-                android:singleLine="true"
-                android:textSize="12sp"
-                android:text="Age"
-                style="?smalTextTheme"/>-->
-
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

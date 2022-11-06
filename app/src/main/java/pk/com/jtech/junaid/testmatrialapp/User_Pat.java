@@ -1,5 +1,6 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 
 
 
@@ -30,6 +29,7 @@ public class User_Pat extends Fragment {
         setRetainInstance(true);
     }
 
+        @SuppressLint("MissingInflatedId")
         @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

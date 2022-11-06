@@ -5,24 +5,29 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+//import android.support.v4.app.Fragment;
+//import android.support.v7.widget.LinearLayoutManager;
+//import android.support.v7.widget.RecyclerView;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+//import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
+//import android.widget.ListView;
+//import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by Junaid on 9/27/2015.
@@ -403,14 +408,18 @@ public class Find_Pat extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            mProgressDialog.setTitle("Please Wait...");
-            mProgressDialog.setMessage("Data is loading");
-            mProgressDialog.show();
+            //mProgressDialog.setTitle("Please Wait...");
+            //mProgressDialog.setMessage("Data is loading");
+            //mProgressDialog.show();
             super.onPreExecute();
         }
         @Override
         protected Void doInBackground(Void... params) {
-            array_list = mMrDatasource.getList(uid,pas,ipa,"S");
+            try {
+                array_list = mMrDatasource.getList(uid,pas,ipa,"S");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return null;
         }
         @Override

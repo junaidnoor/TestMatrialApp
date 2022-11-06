@@ -7,7 +7,7 @@
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
 
-<android.support.v7.widget.CardView
+<androidx.cardview.widget.CardView
     android:id="@+id/ly_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,12 +17,6 @@
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
     app:cardBackgroundColor="@color/white">
-
-    <!--android:background="@drawable/ic_list_view4n1"-->
-    <!--<LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">-->
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -68,26 +62,5 @@
 
     </LinearLayout>
 
-        <!--<LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight=".7"
-            android:orientation="vertical"
-            android:paddingLeft="0dp">
-
-            <ImageView
-                android:id="@+id/row_rido_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="0dp"
-                android:adjustViewBounds="true"
-                android:maxWidth="100dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_indus_male"/>
-        </LinearLayout>-->
-
-    <!--</LinearLayout>-->
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>
 </LinearLayout>

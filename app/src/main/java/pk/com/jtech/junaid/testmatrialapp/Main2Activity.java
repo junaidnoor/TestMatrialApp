@@ -1,27 +1,38 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
-import android.support.v4.app.Fragment;
 //import android.support.v4.app.Fragment;
-import android.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.TextViewCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+//import android.support.v4.app.Fragment;
+//import android.app.FragmentManager;
+//import android.support.v4.app.FragmentTransaction;
+//import android.support.v4.widget.DrawerLayout;
+//import android.support.v4.widget.TextViewCompat;
+//import android.support.v7.app.ActionBar;
+//import android.support.v7.app.ActionBarActivity;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.GestureDetector;
+//import android.support.v7.app.ActionBarDrawerToggle;
+//import android.support.v7.widget.LinearLayoutManager;
+//import android.support.v7.widget.RecyclerView;
+//import android.support.v7.widget.Toolbar;
+//import android.util.Log;
+//import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
+//import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-public class Main2Activity extends ActionBarActivity {
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class Main2Activity extends AppCompatActivity {
 
     public static String uid;
     public static String pas;
@@ -115,6 +126,7 @@ public class Main2Activity extends ActionBarActivity {
 
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private void setupToolbar(){
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         if(toolbar != null)

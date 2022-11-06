@@ -1,24 +1,21 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
-import android.content.Context;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
+
 
 
 public class InvestigationActivity extends AppCompatActivity {
@@ -102,6 +99,7 @@ public class InvestigationActivity extends AppCompatActivity {
         toobarTitle.setText("Investigation View");
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private void setupToolbar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         if(toolbar != null)

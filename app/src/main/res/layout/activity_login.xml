@@ -1,12 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/productDetail_textView_productTitle"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:scrollbars="vertical">
 
@@ -23,30 +23,37 @@
                 android:maxWidth="300dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_logo"
-                android:layout_margin="42dp"/>
+                android:layout_margin="42dp"
+                android:contentDescription="TODO" />
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter User Name" />
+                android:hint="Enter User Name"
+                android:textColorHint="#757575"
+                android:autofillHints=""
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColorHint="#757575" />
 
         </LinearLayout>
     </ScrollView>
 
     <Button
+        android:id="@+id/logbtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick_login"
+
         android:background="?attr/colorPrimary"
         android:textColor="#fffef6ff"
         android:padding="10dp"
-        android:text="Login" />
+        android:text="Login"
+        tools:ignore="UsingOnClickInXml" />
 </LinearLayout>

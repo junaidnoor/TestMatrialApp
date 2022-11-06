@@ -12,36 +12,4 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_margin="15dp" />
 
-    <!--<RelativeLayout style="@style/MyActionBar">
-
-        <TextView
-            style="@style/MyActionBarTitle"
-            android:layout_centerInParent="true"
-            android:text="Home" />
-
-    </RelativeLayout>-->
-
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/home_button_about"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClick_about"
-            android:text="@string/label_button_about" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClick_order"
-            android:layout_weight="1"
-            android:text="@string/label_button_product" />
-
-    </LinearLayout>-->
-
-
 </LinearLayout>
