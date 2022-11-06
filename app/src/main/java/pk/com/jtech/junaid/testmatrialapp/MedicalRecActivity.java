@@ -148,19 +148,6 @@ public class MedicalRecActivity extends AppCompatActivity {
 
                     }
                 }));
-        /*
-        // ----------------- Simple List view -----------------------
-        mListView.setAdapter(mMedRecAdapter);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                medi = array_list.get(position);
-            }
-        });
-        // ----------------- Simple List view -----------------------
-        */
-
     }
 
     private class asyncTask_getData extends AsyncTask<Void, Void, Void>

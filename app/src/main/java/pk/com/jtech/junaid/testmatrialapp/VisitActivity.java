@@ -1,5 +1,6 @@
 package pk.com.jtech.junaid.testmatrialapp;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -120,69 +121,6 @@ public class VisitActivity extends AppCompatActivity {
                 startActivity(mIntent);
             }
         }));
-        /*
-        mListView.addOnItemTouchListener(
-                new RecyclerItemClickListener1(this, new RecyclerItemClickListener1.OnItemClickListener() {
-                    @Override public void onItemClick(View view, int position) {
-                        visitdate = array_list.get(position);
-
-                        Intent mIntent = new Intent();
-                        MedicalRecActivity.uid = uid;
-                        MedicalRecActivity.pas = pas;
-                        MedicalRecActivity.ipa = ipa;
-                        mIntent.setClass(VisitActivity.this, MedicalRecActivity.class);
-                        MedicalRecActivity.mrinfo = mrinfo;
-                        MedicalRecActivity.visitdate = visitdate;
-                        startActivity(mIntent);
-                    }
-                })
-        );
-        */
-
-        /*
-        // ----------------- Simple List view -----------------------
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                visitdate = array_list.get(position);
-
-                Intent mIntent = new Intent();
-                MedicalRecActivity.uid = uid;
-                MedicalRecActivity.pas = pas;
-                MedicalRecActivity.ipa = ipa;
-                mIntent.setClass(VisitActivity.this, MedicalRecActivity.class);
-                MedicalRecActivity.mrinfo = mrinfo;
-                MedicalRecActivity.visitdate = visitdate;
-                startActivity(mIntent);
-
-            }
-        });
-        // ----------------- Simple List view -----------------------
-        */
-
-        /*
-        // Capture Text in EditText
-        editsearch.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void afterTextChanged(Editable arg0) {
-                // TODO Auto-generated method stub
-                String text = editsearch.getText().toString().toLowerCase(Locale.getDefault());
-                mVisitAdapter.filter(text);
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence arg0, int arg1,
-                                          int arg2, int arg3) {
-                // TODO Auto-generated method stub
-            }
-
-            @Override
-            public void onTextChanged(CharSequence arg0, int arg1, int arg2,
-                                      int arg3) {
-                // TODO Auto-generated method stub
-            }
-        });*/
 
     }
 
@@ -214,6 +152,7 @@ public class VisitActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private void setupToolbar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         if(toolbar != null)

@@ -66,29 +66,6 @@ public class MedImageActivity extends AppCompatActivity {
     private void init() {
 
         myWebView = (WebView) findViewById(R.id.web_view);
-
-        //mpat = (TextView) findViewById(R.id.pat_name);
-        //msdw = (TextView) findViewById(R.id.pat_sdw);
-        //mage = (TextView) findViewById(R.id.pat_age);
-
-        //mirs = (TextView) findViewById(R.id.txt_irs);
-        //mtest = (TextView) findViewById(R.id.txt_test);
-        //medate = (TextView) findViewById(R.id.txt_edate);
-        //madmo_no = (TextView) findViewById(R.id.txt_adm_no);
-
-        //mtitle = (TextView) findViewById(R.id.activity_title);
-        //toobarTitle = (TextView) findViewById(R.id.toolbar_title);
-
-        //mpat.setText(mrinfo.getPat_name() + "  [  " + mrinfo.getMr_code() + "  ]");
-        //msdw.setText(mrinfo.getPat_fname());
-        //mage.setText(mrinfo.getPat_age());
-        //toobarTitle.setText("Result  [  "+mGroupDetail.getGroup_name()+"  ]");
-        //mirs.setText(mGroupDetail.getLrs_no());
-        //mtest.setText(mGroupDetail.getTest_name());
-
-        //medate.setText(mGroupDetail.getEntry_time());
-        //madmo_no.setText(mGroupDetail.getAdm_no());
-
     }
 
     public void view_web(String url)

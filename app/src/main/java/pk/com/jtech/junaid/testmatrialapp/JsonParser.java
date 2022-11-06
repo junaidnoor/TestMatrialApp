@@ -984,7 +984,7 @@ public class JsonParser {
     private ArrayList<NameValuePair> putPreamer(){
 
         _mrCode = this.mrCode;
-        _vDate = this.admCode;
+        _vDate = this.vDate;
         _gCode = this.gCode;
         _tCode = this.tCode;
         _admCode = this.admCode;

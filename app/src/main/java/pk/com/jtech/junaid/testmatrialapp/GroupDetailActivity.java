@@ -254,19 +254,6 @@ public class GroupDetailActivity extends AppCompatActivity {
                     }
 
                 }));
-        /*
-        // ----------------- Simple List view -----------------------
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                GroupDetail groupDetail = array_list.get(position);
-
-            }
-        });
-        // ----------------- Simple List view -----------------------
-        */
-
         // -------------------- Capture Text in EditText -----------------------------
         editsearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -390,10 +377,13 @@ public class GroupDetailActivity extends AppCompatActivity {
         }
         else if(item.getTitle()=="Image"){
             Intent mIntent = new Intent();
-//            mIntent.setClass(GroupDetailActivity.this, MedImageActivity.class);
-            mIntent.setClass(GroupDetailActivity.this, MediOne.class);
-            startActivity(mIntent);
+            // use MedImageActivity after few changing 6-Nov-2022
+            //mIntent.setClass(GroupDetailActivity.this, MedImageActivity.class);
+            //startActivity(mIntent);
             activity.closeContextMenu();
+
+            // MediOne Activity closed...
+            //mIntent.setClass(GroupDetailActivity.this, MediOne.class);
         }
         else {return false;}
         return true;
