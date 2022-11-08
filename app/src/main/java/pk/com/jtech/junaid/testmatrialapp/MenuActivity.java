@@ -187,7 +187,10 @@ public class MenuActivity extends AppCompatActivity {
                     finish();
                     return true;
                 case R.id.exit:
-                    finish();
+                    //finish();
+                    System.exit(0);
+                    finishAffinity();
+
                     return true;
                 default:
                     Toast.makeText(getApplicationContext(),"Somethings Wrong",Toast.LENGTH_SHORT).show();
@@ -286,35 +289,4 @@ public class MenuActivity extends AppCompatActivity {
 
         mname.setText(eName);
     }
-
-    /*
-    private class asyncTask_getData extends AsyncTask<Void, Void, Void>
-    {
-        //ProgressDialog mProgressDialog = new ProgressDialog(MenuActivity.this);
-
-        @Override
-        protected void onPreExecute() {
-            //mProgressDialog.setTitle("Please Wait...");
-            //mProgressDialog.setMessage("Data is loading");
-            //mProgressDialog.show();
-            super.onPreExecute();
-        }
-        @Override
-        protected Void doInBackground(Void... params) {
-            try {
-                array_list = mMrDatasource.getEmp(uid, pas, ipa, "A");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            //mProgressDialog.dismiss();
-            poulate();
-            super.onPostExecute(aVoid);
-        }
-    }
-
-     */
 }

@@ -297,9 +297,9 @@ public class GroupDetailActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            //mProgressDialog.setTitle("Please Wait...");
-            //mProgressDialog.setMessage("Data is loading");
-            //mProgressDialog.show();
+            mProgressDialog.setTitle("Please Wait...");
+            mProgressDialog.setMessage("Data is loading");
+            mProgressDialog.show();
             super.onPreExecute();
         }
         @Override
